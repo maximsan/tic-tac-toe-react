@@ -40,12 +40,20 @@ html, body {
   }
   
   .kbd-navigation .square:focus {
-    background: #ddd;
+    background: #988;
   }
   
+  .rootOfGame{
+    position: relative;
+  }
+
   .game {
+    top: -130px;
+    left: 40px;
+    position: absolute;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -ms-flex-direction: row;
   }
   
   .game-info {
@@ -64,6 +72,8 @@ html, body {
       margin-bottom: 20px;
       font-weight: bold;
       font-size: 20px;
+      position: relative;
+    left: 49px;
   }
   
   .move{
@@ -73,4 +83,14 @@ html, body {
       outline: none;
       font-weight: bold;
       font-size: 16px;
+      cursor: pointer;
+      background: #f8f8e8;
+      border: 2px solid #d4b28e;
+      width: 180px;
+      height: 50px;
+  }
+
+  .move.active {
+    background: #fffc73;
+    border: 2px solid #e5b656;
   }

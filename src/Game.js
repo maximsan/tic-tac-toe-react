@@ -14,7 +14,6 @@ export default class Game extends React.Component {
             positions: [
                 { col: 0, row: 0 }
             ],
-            active: true
         };
     }
 
@@ -41,7 +40,6 @@ export default class Game extends React.Component {
             positions: positions.concat(
                 { col: colNew, row: rowNew }
             ),
-            active: this.state.active
         })
     }
 
@@ -67,7 +65,6 @@ export default class Game extends React.Component {
         const current = history[this.state.stepNumber];
         const winner = whoIsWinner(current.squares);
         const positions = this.state.positions;
-        const active = this.state.active
 
         const moves = history.map((step, move) => {
             let desc = move ?

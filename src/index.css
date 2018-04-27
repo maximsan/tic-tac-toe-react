@@ -7,7 +7,18 @@ html, body {
   
   ol, ul {
     padding: 0px 0px;
+    margin: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 270px;
+    height: 270px;
+  }
+
+  li{
+    height: 20%;
+    margin: 0px 4px;
   }
   
   .board-row:after {
@@ -52,7 +63,7 @@ html, body {
 
   .game {
     top: -130px;
-    left: 40px;
+    left: 130px;
     position: absolute;
     display: -ms-flexbox;
     display: flex;
@@ -76,7 +87,8 @@ html, body {
       font-weight: bold;
       font-size: 20px;
       position: relative;
-    left: 49px;
+      left: 49px;
+      text-align: center;
   }
   
   .move{

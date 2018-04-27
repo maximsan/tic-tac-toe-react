@@ -85,12 +85,15 @@ export default class Game extends React.Component {
             status = 'Winner is ' + winner[0];
             winCells = winner.slice(1);
         }
-        else {
-            status = 'Next is ' + (this.state.xIsNext ? 'X' : 'O');
+        else if (this.state.stepNumber === 9) {
+            status = 'Draw!!!'
         }
+        else
+            status = 'Next is ' + (this.state.xIsNext ? 'X' : 'O');
+
 
         return (
-            <div className="rootOfGame">
+            <div className="rootOfGame" >
                 <div className="game">
                     <Board squares={current.squares} winCells={winCells}
                         onClick={(i) => this.handleClick(i)} />

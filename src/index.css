@@ -3,9 +3,21 @@ html, body {
     margin: 20px;
     height: 100%;
     width: 100%;
-  }
+}
+
+h1{
+  font-size: 3rem;
+}
   
-  ol, ul {
+.main-title{
+  position: relative;
+  top: -160px;
+  left: 55px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.moves {
     padding: 0px 0px;
     margin: 0;
     list-style: none;
@@ -16,7 +28,7 @@ html, body {
     height: 270px;
   }
 
-  li{
+.moves > .one-move{
     height: 20%;
     margin: 0px 4px;
   }
@@ -62,7 +74,7 @@ html, body {
   }
 
   .game {
-    top: -130px;
+    top: -80px;
     left: 130px;
     position: absolute;
     display: -ms-flexbox;

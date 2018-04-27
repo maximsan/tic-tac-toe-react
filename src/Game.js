@@ -72,7 +72,7 @@ export default class Game extends React.Component {
                 <span>Go to start</span>;
 
             return (
-                <li key={move}>
+                <li key={move} className="one-move">
                     <button className={'move ' + ((this.state.stepNumber === move) ? 'active' : '')} onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
             );
@@ -93,7 +93,8 @@ export default class Game extends React.Component {
 
 
         return (
-            <div className="rootOfGame" >
+            <div className="rootOfGame">
+                <h1 className="main-title">Tic-Tac-Toe</h1>
                 <div className="game">
                     <Board squares={current.squares} winCells={winCells}
                         onClick={(i) => this.handleClick(i)} />

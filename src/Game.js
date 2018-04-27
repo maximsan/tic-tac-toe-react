@@ -78,10 +78,12 @@ export default class Game extends React.Component {
             );
         });
 
-        var status;
+        let status;
+        let winCells;
 
         if (winner) {
-            status = 'Winner is ' + winner;
+            status = 'Winner is ' + winner[0];
+            winCells = winner.slice(1);
         }
         else {
             status = 'Next is ' + (this.state.xIsNext ? 'X' : 'O');
@@ -90,7 +92,7 @@ export default class Game extends React.Component {
         return (
             <div className="rootOfGame">
                 <div className="game">
-                    <Board squares={current.squares}
+                    <Board squares={current.squares} winCells={winCells}
                         onClick={(i) => this.handleClick(i)} />
 
                 </div>
@@ -131,7 +133,7 @@ function whoIsWinner(squares) {
     for (let i = 0; i < combination.length; i++) {
         const [el1, el2, el3] = combination[i];
         if (squares[el1] && squares[el1] === squares[el2] && squares[el1] === squares[el3]) {
-            return squares[el1];
+            return [squares[el1], el1, el2, el3];
         }
     }
     return null;

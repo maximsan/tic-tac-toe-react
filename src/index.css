@@ -43,6 +43,9 @@ html, body {
     background: #988;
   }
   
+  /* .container{
+    position: relative;
+  } */
   .rootOfGame{
     position: relative;
   }
@@ -93,4 +96,25 @@ html, body {
   .move.active {
     background: #fffc73;
     border: 2px solid #e5b656;
+  }
+
+  .border-row > .colorClass{
+    border: 4px solid #a7ffa7;
+    background: #382808;
+    color: #ff9999;
+  }
+
+  .border-row > .colorClass {
+    animation-duration: 600ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+ }
+ @keyframes blink {
+    from {
+       opacity: 1;
+    }
+    to {
+       opacity: 0.2;
+    }
   }
